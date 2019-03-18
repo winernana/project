@@ -1,62 +1,65 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>蜜芽，中国领先的进口母婴限时特卖商城</title>
-		<link rel="stylesheet" href="css/zhuye.css" />
-		<link rel="stylesheet" href="css/xiangiqng.css" />
-		<link rel="stylesheet" href="css/shoppingCart.css" />
-		<script type="text/javascript" src="js/jquery-1.12.3.js" ></script>
-		<script type="text/javascript" src="js/jquery.cookie.js" ></script>
-		<script type="text/javascript" src="js/lunbo.js" ></script>
-		<script type="text/javascript" src="js/xiangqing.js" ></script>
-		<script type="text/javascript" src="js/shoppingCart.js" ></script>
+		<link rel="stylesheet" href="{% static 'css/zhuye.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/xiangiqng.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/shoppingCart.css' %}" />
+		<script type="text/javascript" src="{% static 'js/jquery-1.12.3.js' %}" ></script>
+		<script type="text/javascript" src="{% static 'js/jquery.cookie.js' %}" ></script>
+{#		<script type="text/javascript" src="{% static 'js/lunbo.js' %}" ></script>#}
+{#		<script type="text/javascript" src="{% static 'js/xiangqing.js' %}" ></script>#}
+		<script type="text/javascript" src="{% static 'js/shoppingCart.js' %}" ></script>
+
+{#        <script src="{% static 'js/jiaoben.js' %}"></script>#}
 	</head>
 	<body>
+
+
 		<div class="bg">
 			<div class="header">
 				<div class="headerLeft">
 					<a href="#">手机蜜芽</a>
 				</div>
 				<div class="headerRight">
-					<span class="nihao">你好，欢迎来到蜜芽 !</span>
+					<span class="nihao">你好:{{ user.tel }}，欢迎来到蜜芽 !</span>
 					<div id="addname"></div>
 					<ul>
 						<li><a href="login.html" class="lis">登录</a></li>
-						<li><a href="register.html" >免费注册</a></li>
+						<li><a href="register.html">免费注册</a></li>
 					</ul>
 					<p>帮助中心</p>
 				</div>
 			</div>
 		</div>
-		
-		
-		
-		
+
+
 		<div class="bg3">
 			<div class="nav">
 				<ul>
-					
-					<li class="active"><a href="#" >首页</a></li>
+
+					<li class="active"><a href="{% url 'miya:home' %}">首页</a></li>
 					<li><a href="#">纸尿裤</a></li>
 					<li><a href="#">奶粉</a></li>
 					<li class="fys"><a href="#">正品保证</a>
-						
-					</li>														
+
+					</li>
 				</ul>
-				
+
 			</div>
 			<div class="list">
 				<span>正品保证</span>
 				<span>退货政策</span>
-				<span>帮助中心</span>					
+				<span>帮助中心</span>
 			</div>
 			<div class="menu">
 			<div class="tit">
-			<h3>全部商品分类</h3>			
+			<h3>全部商品分类</h3>
 			</div>
 			<div class="dls">
-				<span ></span>
+				<span></span>
 				<dl>
 					<dt>
 						<div class="inner">
@@ -70,9 +73,9 @@
 							<a href="#">拉拉裤</a>
 							<a href="#">宝宝湿巾</a>
 							<a href="#">德国爱他美</a>
-							<span>&gt;</span>							
+							<span>&gt;</span>
 						</p>
-						</div>						
+						</div>
 					</dt>
 					<dd style="width: 870px; height: 74px;">
 						<!--::before-->
@@ -102,11 +105,11 @@
 								<h3>全球奶粉大牌</h3>
 								<p>
 									<a href="#" class="hot">德国爱他美</a>
-									<a href="#" class="hot">德国Hipp</a>									
+									<a href="#" class="hot">德国Hipp</a>
 									<a href="#">德国Topfer</a>
 									<a href="#" class="hot">荷兰Nutrilon</a>
 									<a href="#" class="hot">荷兰Herobaby</a>
-									<a href="#">英国Cow&Gate</a>
+									<a href="#">英国Cow&amp;Gate</a>
 									<a href="#">澳洲Aptmail</a>
 									<a href="#">德国holle</a>
 									<a href="#">英国Aptmail</a>
@@ -115,7 +118,7 @@
 									<a href="#">授权行货爱他美</a>
 									<a href="#">授权行货诺优能</a>
 									<a href="#">授权行货 喜宝</a>
-									<a href="#">美国MeadJohnson</a>					
+									<a href="#">美国MeadJohnson</a>
 								</p>
 							</div>
 							<div class="colum" style="position:absolute ;left: 0; top: 108px;">
@@ -123,21 +126,21 @@
 								<p>
 									<a href="#" class="hot">尤妮佳</a>
 									<a href="#" class="hot">花王</a>
-									<a href="#" class="hot">GOON大王天使</a>																		
+									<a href="#" class="hot">GOON大王天使</a>
 									<a href="#">GOON大王维E</a>
 									<a href="#" class="hot">Pampers帮宝适</a>
 									<a href="#">Singapore Huggies新加坡好奇</a>
 									<a href="#">Pampers care帮宝适棉柔</a>
 									<a href="#">Huggies Gold好奇金装</a>
-									<a href="#">Huggies platinum好奇铂金装</a>								
+									<a href="#">Huggies platinum好奇铂金装</a>
 									<a href="#" class="hot">Mamypoko 妈咪宝贝</a>
 									<a href="#">Libero丽贝乐</a>
 									<a href="#">Bella Baby Happy贝拉宝贝</a>
 									<a href="#">BioFities爱婴舒坦</a>
-									<a href="#">BAMBO班博</a>													
+									<a href="#">BAMBO班博</a>
 								</p>
 							</div>
-							
+
 						</div>
 						<div class="brands">
 							<h3>热卖大牌</h3>
@@ -145,63 +148,63 @@
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/1_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/1_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/2_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/2_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/3_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/3_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/4_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/4_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/5_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/5_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/6_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/6_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/7_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/7_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/8_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/8_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/9_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/9_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
@@ -223,9 +226,9 @@
 							<a href="#">磨牙饼干</a>
 							<a href="#">鱼油/DHA</a>
 							<a href="#">钙铁锌</a>
-							<span>&gt;</span>							
+							<span>&gt;</span>
 						</p>
-						</div>						
+						</div>
 					</dt>
 					<dd style="width: 870px; height: 74px;">
 						<!--::before-->
@@ -243,7 +246,7 @@
 									<a href="#">鱼肠/肉肠</a>
 									<a href="#">磨牙饼干</a>
 									<a href="#">奶酪/奶制品</a>
-									<a href="#">食用油/调味品</a>																		
+									<a href="#">食用油/调味品</a>
 								</p>
 							</div>
 							<div class="colum" style="position:absolute ;left: 280px; top: 0;">
@@ -253,20 +256,20 @@
 									<a href="#">钙铁锌</a>
 									<a href="#" class="hot">VD/维生素</a>
 									<a href="#" class="hot">益生菌</a>
-									<a href="#" class="hot">免疫力</a>							
+									<a href="#" class="hot">免疫力</a>
 								</p>
 							</div>
 							<div class="colum" style="position:absolute ;left: 280px; top: 108px;">
 								<h3>宝宝用品</h3>
 								<p>
 									<a href="#" class="hot">日用物品</a>
-									<a href="#" class="hot">理发/梳发</a>									
+									<a href="#" class="hot">理发/梳发</a>
 									<a href="#">唇部护理</a>
 									<a href="#" class="hot">浴盆及洗澡周边</a>
 									<a href="#" class="hot">医护/退热</a>
 									<a href="#">坐便器</a>
 									<a href="#">口腔护理</a>
-									<a href="#">鼻腔护理</a>					
+									<a href="#">鼻腔护理</a>
 								</p>
 							</div>
 							<div class="colum" style="position:absolute ;left: 0; top: 156px;">
@@ -274,14 +277,14 @@
 								<p>
 									<a href="#" class="hot">奶瓶</a>
 									<a href="#" class="hot">奶嘴/安抚奶嘴</a>
-									<a href="#" class="hot">碗碟餐具</a>																		
+									<a href="#" class="hot">碗碟餐具</a>
 									<a href="#">食物研磨及制作</a>
 									<a href="#" class="hot">事物存储</a>
 									<a href="#">学饮杯/水壶</a>
 									<a href="#">消毒/暖奶/加热</a>
 									<a href="#">围兜/防溅衣</a>
-									<a href="#">辅助配件</a>								
-									<a href="#" class="hot">餐椅</a>													
+									<a href="#">辅助配件</a>
+									<a href="#" class="hot">餐椅</a>
 								</p>
 							</div>
 							<div class="colum" style="position:absolute ;left: 280px; top: 240px;">
@@ -289,19 +292,19 @@
 								<p>
 									<a href="#" class="hot">套装/礼盒</a>
 									<a href="#" class="hot">洗发沐浴</a>
-									<a href="#" class="hot">乳液/抚触油</a>																		
+									<a href="#" class="hot">乳液/抚触油</a>
 									<a href="#">面霜/万用霜</a>
 									<a href="#" class="hot">爽身/防晒</a>
 									<a href="#">唇部护理</a>
 									<a href="#">驱蚊/驱虫</a>
 									<a href="#">屁屁霜/护臀霜</a>
-									<a href="#">洗澡用品</a>								
-									<a href="#" class="hot">鼻腔护理</a>	
-									<a href="#" class="hot">理发/梳发</a>													
-									<a href="#" class="hot">如厕训练</a>													
-									<a href="#" >医护用品</a>													
-									<a href="#" class="hot">日用配件</a>																								
-									
+									<a href="#">洗澡用品</a>
+									<a href="#" class="hot">鼻腔护理</a>
+									<a href="#" class="hot">理发/梳发</a>
+									<a href="#" class="hot">如厕训练</a>
+									<a href="#">医护用品</a>
+									<a href="#" class="hot">日用配件</a>
+
 								</p>
 							</div>
 						</div>
@@ -311,63 +314,63 @@
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/1_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/1_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/2_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/2_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/3_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/3_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/4_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/4_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/5_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/5_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/6_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/6_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/7_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/7_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/8_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/8_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/9_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/9_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
@@ -386,10 +389,10 @@
 							<a href="#">孕妇装/孕妇裙</a>
 							<a href="#">待产/月子用品</a>
 							<a href="#">防辐射服</a>
-							<a href="#">孕期营养</a>							
-							<span>&gt;</span>							
+							<a href="#">孕期营养</a>
+							<span>&gt;</span>
 						</p>
-						</div>						
+						</div>
 					</dt>
 					<dd style="width: 870px; height: 74px;">
 						<!--::before-->
@@ -419,11 +422,11 @@
 								<h3>全球奶粉大牌</h3>
 								<p>
 									<a href="#" class="hot">德国爱他美</a>
-									<a href="#" class="hot">德国Hipp</a>									
+									<a href="#" class="hot">德国Hipp</a>
 									<a href="#">德国Topfer</a>
 									<a href="#" class="hot">荷兰Nutrilon</a>
 									<a href="#" class="hot">荷兰Herobaby</a>
-									<a href="#">英国Cow&Gate</a>
+									<a href="#">英国Cow&amp;Gate</a>
 									<a href="#">澳洲Aptmail</a>
 									<a href="#">德国holle</a>
 									<a href="#">英国Aptmail</a>
@@ -432,7 +435,7 @@
 									<a href="#">授权行货爱他美</a>
 									<a href="#">授权行货诺优能</a>
 									<a href="#">授权行货 喜宝</a>
-									<a href="#">美国MeadJohnson</a>					
+									<a href="#">美国MeadJohnson</a>
 								</p>
 							</div>
 							<div class="colum" style="position:absolute ;left: 0; top: 108px;">
@@ -440,21 +443,21 @@
 								<p>
 									<a href="#" class="hot">尤妮佳</a>
 									<a href="#" class="hot">花王</a>
-									<a href="#" class="hot">GOON大王天使</a>																		
+									<a href="#" class="hot">GOON大王天使</a>
 									<a href="#">GOON大王维E</a>
 									<a href="#" class="hot">Pampers帮宝适</a>
 									<a href="#">Singapore Huggies新加坡好奇</a>
 									<a href="#">Pampers care帮宝适棉柔</a>
 									<a href="#">Huggies Gold好奇金装</a>
-									<a href="#">Huggies platinum好奇铂金装</a>								
+									<a href="#">Huggies platinum好奇铂金装</a>
 									<a href="#" class="hot">Mamypoko 妈咪宝贝</a>
 									<a href="#">Libero丽贝乐</a>
 									<a href="#">Bella Baby Happy贝拉宝贝</a>
 									<a href="#">BioFities爱婴舒坦</a>
-									<a href="#">BAMBO班博</a>													
+									<a href="#">BAMBO班博</a>
 								</p>
 							</div>
-							
+
 						</div>
 						<div class="brands">
 							<h3>热卖大牌</h3>
@@ -462,63 +465,63 @@
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/1_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/1_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/2_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/2_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/3_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/3_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/4_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/4_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/5_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/5_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/6_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/6_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/7_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/7_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/8_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/8_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/9_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/9_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
@@ -539,9 +542,9 @@
 							<a href="#">T恤/polo服</a>
 							<a href="#">亲子装</a>
 							<a href="#">太阳镜</a>
-							<span>&gt;</span>							
+							<span>&gt;</span>
 						</p>
-						</div>						
+						</div>
 					</dt>
 					<dd style="width: 870px; height: 74px;">
 						<!--::before-->
@@ -571,11 +574,11 @@
 								<h3>全球奶粉大牌</h3>
 								<p>
 									<a href="#" class="hot">德国爱他美</a>
-									<a href="#" class="hot">德国Hipp</a>									
+									<a href="#" class="hot">德国Hipp</a>
 									<a href="#">德国Topfer</a>
 									<a href="#" class="hot">荷兰Nutrilon</a>
 									<a href="#" class="hot">荷兰Herobaby</a>
-									<a href="#">英国Cow&Gate</a>
+									<a href="#">英国Cow&amp;Gate</a>
 									<a href="#">澳洲Aptmail</a>
 									<a href="#">德国holle</a>
 									<a href="#">英国Aptmail</a>
@@ -584,7 +587,7 @@
 									<a href="#">授权行货爱他美</a>
 									<a href="#">授权行货诺优能</a>
 									<a href="#">授权行货 喜宝</a>
-									<a href="#">美国MeadJohnson</a>					
+									<a href="#">美国MeadJohnson</a>
 								</p>
 							</div>
 							<div class="colum" style="position:absolute ;left: 0; top: 108px;">
@@ -592,21 +595,21 @@
 								<p>
 									<a href="#" class="hot">尤妮佳</a>
 									<a href="#" class="hot">花王</a>
-									<a href="#" class="hot">GOON大王天使</a>																		
+									<a href="#" class="hot">GOON大王天使</a>
 									<a href="#">GOON大王维E</a>
 									<a href="#" class="hot">Pampers帮宝适</a>
 									<a href="#">Singapore Huggies新加坡好奇</a>
 									<a href="#">Pampers care帮宝适棉柔</a>
 									<a href="#">Huggies Gold好奇金装</a>
-									<a href="#">Huggies platinum好奇铂金装</a>								
+									<a href="#">Huggies platinum好奇铂金装</a>
 									<a href="#" class="hot">Mamypoko 妈咪宝贝</a>
 									<a href="#">Libero丽贝乐</a>
 									<a href="#">Bella Baby Happy贝拉宝贝</a>
 									<a href="#">BioFities爱婴舒坦</a>
-									<a href="#">BAMBO班博</a>													
+									<a href="#">BAMBO班博</a>
 								</p>
 							</div>
-							
+
 						</div>
 						<div class="brands">
 							<h3>热卖大牌</h3>
@@ -614,63 +617,63 @@
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/1_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/1_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/2_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/2_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/3_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/3_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/4_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/4_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/5_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/5_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/6_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/6_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/7_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/7_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/8_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/8_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/9_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/9_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
@@ -691,9 +694,9 @@
 							<a href="#">牙胶/咬咬胶</a>
 							<a href="#">戏水/游泳装备</a>
 							<a href="#">中文绘本/DHA</a>
-							<span>&gt;</span>							
+							<span>&gt;</span>
 						</p>
-						</div>						
+						</div>
 					</dt>
 					<dd style="width: 870px; height: 74px;">
 						<!--::before-->
@@ -723,11 +726,11 @@
 								<h3>全球奶粉大牌</h3>
 								<p>
 									<a href="#" class="hot">德国爱他美</a>
-									<a href="#" class="hot">德国Hipp</a>									
+									<a href="#" class="hot">德国Hipp</a>
 									<a href="#">德国Topfer</a>
 									<a href="#" class="hot">荷兰Nutrilon</a>
 									<a href="#" class="hot">荷兰Herobaby</a>
-									<a href="#">英国Cow&Gate</a>
+									<a href="#">英国Cow&amp;Gate</a>
 									<a href="#">澳洲Aptmail</a>
 									<a href="#">德国holle</a>
 									<a href="#">英国Aptmail</a>
@@ -736,7 +739,7 @@
 									<a href="#">授权行货爱他美</a>
 									<a href="#">授权行货诺优能</a>
 									<a href="#">授权行货 喜宝</a>
-									<a href="#">美国MeadJohnson</a>					
+									<a href="#">美国MeadJohnson</a>
 								</p>
 							</div>
 							<div class="colum" style="position:absolute ;left: 0; top: 108px;">
@@ -744,21 +747,21 @@
 								<p>
 									<a href="#" class="hot">尤妮佳</a>
 									<a href="#" class="hot">花王</a>
-									<a href="#" class="hot">GOON大王天使</a>																		
+									<a href="#" class="hot">GOON大王天使</a>
 									<a href="#">GOON大王维E</a>
 									<a href="#" class="hot">Pampers帮宝适</a>
 									<a href="#">Singapore Huggies新加坡好奇</a>
 									<a href="#">Pampers care帮宝适棉柔</a>
 									<a href="#">Huggies Gold好奇金装</a>
-									<a href="#">Huggies platinum好奇铂金装</a>								
+									<a href="#">Huggies platinum好奇铂金装</a>
 									<a href="#" class="hot">Mamypoko 妈咪宝贝</a>
 									<a href="#">Libero丽贝乐</a>
 									<a href="#">Bella Baby Happy贝拉宝贝</a>
 									<a href="#">BioFities爱婴舒坦</a>
-									<a href="#">BAMBO班博</a>													
+									<a href="#">BAMBO班博</a>
 								</p>
 							</div>
-							
+
 						</div>
 						<div class="brands">
 							<h3>热卖大牌</h3>
@@ -766,63 +769,63 @@
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/1_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/1_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/2_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/2_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/3_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/3_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/4_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/4_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/5_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/5_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/6_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/6_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/7_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/7_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/8_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/8_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/9_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/9_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
@@ -842,9 +845,9 @@
 							<a href="#">化妆水/爽肤水</a>
 							<a href="#">面膜/套装礼盒</a>
 							<a href="#">美体塑身</a>
-							<span>&gt;</span>							
+							<span>&gt;</span>
 						</p>
-						</div>						
+						</div>
 					</dt>
 					<dd style="width: 870px; height: 74px;">
 						<!--::before-->
@@ -874,11 +877,11 @@
 								<h3>全球奶粉大牌</h3>
 								<p>
 									<a href="#" class="hot">德国爱他美</a>
-									<a href="#" class="hot">德国Hipp</a>									
+									<a href="#" class="hot">德国Hipp</a>
 									<a href="#">德国Topfer</a>
 									<a href="#" class="hot">荷兰Nutrilon</a>
 									<a href="#" class="hot">荷兰Herobaby</a>
-									<a href="#">英国Cow&Gate</a>
+									<a href="#">英国Cow&amp;Gate</a>
 									<a href="#">澳洲Aptmail</a>
 									<a href="#">德国holle</a>
 									<a href="#">英国Aptmail</a>
@@ -887,7 +890,7 @@
 									<a href="#">授权行货爱他美</a>
 									<a href="#">授权行货诺优能</a>
 									<a href="#">授权行货 喜宝</a>
-									<a href="#">美国MeadJohnson</a>					
+									<a href="#">美国MeadJohnson</a>
 								</p>
 							</div>
 							<div class="colum" style="position:absolute ;left: 0; top: 108px;">
@@ -895,21 +898,21 @@
 								<p>
 									<a href="#" class="hot">尤妮佳</a>
 									<a href="#" class="hot">花王</a>
-									<a href="#" class="hot">GOON大王天使</a>																		
+									<a href="#" class="hot">GOON大王天使</a>
 									<a href="#">GOON大王维E</a>
 									<a href="#" class="hot">Pampers帮宝适</a>
 									<a href="#">Singapore Huggies新加坡好奇</a>
 									<a href="#">Pampers care帮宝适棉柔</a>
 									<a href="#">Huggies Gold好奇金装</a>
-									<a href="#">Huggies platinum好奇铂金装</a>								
+									<a href="#">Huggies platinum好奇铂金装</a>
 									<a href="#" class="hot">Mamypoko 妈咪宝贝</a>
 									<a href="#">Libero丽贝乐</a>
 									<a href="#">Bella Baby Happy贝拉宝贝</a>
 									<a href="#">BioFities爱婴舒坦</a>
-									<a href="#">BAMBO班博</a>													
+									<a href="#">BAMBO班博</a>
 								</p>
 							</div>
-							
+
 						</div>
 						<div class="brands">
 							<h3>热卖大牌</h3>
@@ -917,63 +920,63 @@
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/1_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/1_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/2_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/2_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/3_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/3_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/4_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/4_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/5_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/5_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/6_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/6_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/7_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/7_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/8_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/8_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/9_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/9_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
@@ -995,9 +998,9 @@
 							<a href="#">胶原蛋白</a>
 							<a href="#">酵素</a>
 							<a href="#">蔓越莓/葡萄籽</a>
-							<span>&gt;</span>							
+							<span>&gt;</span>
 						</p>
-						</div>					
+						</div>
 					</dt>
 					<dd style="width: 870px; height: 74px;">
 						<!--::before-->
@@ -1027,11 +1030,11 @@
 								<h3>全球奶粉大牌</h3>
 								<p>
 									<a href="#" class="hot">德国爱他美</a>
-									<a href="#" class="hot">德国Hipp</a>									
+									<a href="#" class="hot">德国Hipp</a>
 									<a href="#">德国Topfer</a>
 									<a href="#" class="hot">荷兰Nutrilon</a>
 									<a href="#" class="hot">荷兰Herobaby</a>
-									<a href="#">英国Cow&Gate</a>
+									<a href="#">英国Cow&amp;Gate</a>
 									<a href="#">澳洲Aptmail</a>
 									<a href="#">德国holle</a>
 									<a href="#">英国Aptmail</a>
@@ -1040,7 +1043,7 @@
 									<a href="#">授权行货爱他美</a>
 									<a href="#">授权行货诺优能</a>
 									<a href="#">授权行货 喜宝</a>
-									<a href="#">美国MeadJohnson</a>					
+									<a href="#">美国MeadJohnson</a>
 								</p>
 							</div>
 							<div class="colum" style="position:absolute ;left: 0; top: 108px;">
@@ -1048,21 +1051,21 @@
 								<p>
 									<a href="#" class="hot">尤妮佳</a>
 									<a href="#" class="hot">花王</a>
-									<a href="#" class="hot">GOON大王天使</a>																		
+									<a href="#" class="hot">GOON大王天使</a>
 									<a href="#">GOON大王维E</a>
 									<a href="#" class="hot">Pampers帮宝适</a>
 									<a href="#">Singapore Huggies新加坡好奇</a>
 									<a href="#">Pampers care帮宝适棉柔</a>
 									<a href="#">Huggies Gold好奇金装</a>
-									<a href="#">Huggies platinum好奇铂金装</a>								
+									<a href="#">Huggies platinum好奇铂金装</a>
 									<a href="#" class="hot">Mamypoko 妈咪宝贝</a>
 									<a href="#">Libero丽贝乐</a>
 									<a href="#">Bella Baby Happy贝拉宝贝</a>
 									<a href="#">BioFities爱婴舒坦</a>
-									<a href="#">BAMBO班博</a>													
+									<a href="#">BAMBO班博</a>
 								</p>
 							</div>
-							
+
 						</div>
 						<div class="brands">
 							<h3>热卖大牌</h3>
@@ -1070,63 +1073,63 @@
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/1_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/1_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/2_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/2_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/3_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/3_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/4_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/4_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/5_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/5_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/6_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/6_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/7_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/7_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/8_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/8_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/9_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/9_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
@@ -1147,9 +1150,9 @@
 							<a href="#">宝宝湿巾</a>
 							<a href="#">浴巾/毛巾/拖鞋</a>
 
-							<span>&gt;</span>						
+							<span>&gt;</span>
 						</p>
-						</div>						
+						</div>
 					</dt>
 					<dd style="width: 870px; height: 74px;">
 						<!--::before-->
@@ -1179,11 +1182,11 @@
 								<h3>全球奶粉大牌</h3>
 								<p>
 									<a href="#" class="hot">德国爱他美</a>
-									<a href="#" class="hot">德国Hipp</a>									
+									<a href="#" class="hot">德国Hipp</a>
 									<a href="#">德国Topfer</a>
 									<a href="#" class="hot">荷兰Nutrilon</a>
 									<a href="#" class="hot">荷兰Herobaby</a>
-									<a href="#">英国Cow&Gate</a>
+									<a href="#">英国Cow&amp;Gate</a>
 									<a href="#">澳洲Aptmail</a>
 									<a href="#">德国holle</a>
 									<a href="#">英国Aptmail</a>
@@ -1192,7 +1195,7 @@
 									<a href="#">授权行货爱他美</a>
 									<a href="#">授权行货诺优能</a>
 									<a href="#">授权行货 喜宝</a>
-									<a href="#">美国MeadJohnson</a>					
+									<a href="#">美国MeadJohnson</a>
 								</p>
 							</div>
 							<div class="colum" style="position:absolute ;left: 0; top: 108px;">
@@ -1200,21 +1203,21 @@
 								<p>
 									<a href="#" class="hot">尤妮佳</a>
 									<a href="#" class="hot">花王</a>
-									<a href="#" class="hot">GOON大王天使</a>																		
+									<a href="#" class="hot">GOON大王天使</a>
 									<a href="#">GOON大王维E</a>
 									<a href="#" class="hot">Pampers帮宝适</a>
 									<a href="#">Singapore Huggies新加坡好奇</a>
 									<a href="#">Pampers care帮宝适棉柔</a>
 									<a href="#">Huggies Gold好奇金装</a>
-									<a href="#">Huggies platinum好奇铂金装</a>								
+									<a href="#">Huggies platinum好奇铂金装</a>
 									<a href="#" class="hot">Mamypoko 妈咪宝贝</a>
 									<a href="#">Libero丽贝乐</a>
 									<a href="#">Bella Baby Happy贝拉宝贝</a>
 									<a href="#">BioFities爱婴舒坦</a>
-									<a href="#">BAMBO班博</a>													
+									<a href="#">BAMBO班博</a>
 								</p>
 							</div>
-							
+
 						</div>
 						<div class="brands">
 							<h3>热卖大牌</h3>
@@ -1222,78 +1225,78 @@
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/1_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/1_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/2_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/2_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/3_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/3_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/4_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/4_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/5_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/5_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/6_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/6_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/7_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/7_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/8_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/8_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 								<a href="#">
 									<div class="table">
 										<p>
-											<img src="img/9_pinp.jpg" class="hoverload" />
+											<img src="{% static 'img/9_pinp.jpg' %}" class="hoverload">
 										</p>
 									</div>
 								</a>
 							</div>
 						</div>
 					</dd>
-				</dl>				
+				</dl>
 			</div>
 		</div>
 		</div>
-		
+
 				<!--logo-->
 		<div class="logo">
-			<a href="page.html" class="a-logo">
-				<img src="img/miya.jpg"/>
+			<a href="{% url 'miya:home' %}" class="a-logo">
+				<img src="{% static 'img/miya.jpg' %}">
 			</a>
 			<div class="rightStep">
 				<ul class="step">
@@ -1324,20 +1327,25 @@
 				<div class="gs">操作</div>
 			</div>
 		</div>
-		
-			
+
+
 		<!--购物车详情-->
 		<div class="details">
+            {% for cart in carts %}
+                {{ cart.goods.productimg }}
+                {{ cart.goods.productlongname }}
+                {{ cart.num }}
+            {% endfor %}
 		</div>
-		
+
 		<!--购物车为空时显示提示信息-->
-		<div class="empty">
+		<div class="empty" style="display: block;">
 				<p class="baby">您还没有为您可爱的宝宝挑选任何商品哦~</p>
-				<p class="index">您可以去 <a href="page.html" >首页</a> 挑选宝宝喜欢的商品</p>
+				<p class="index">您可以去 <a href="{% url 'miya:home' %}">首页</a> 挑选宝宝喜欢的商品</p>
 		</div>
 
 		<!--结算-->
-		<div class="money">
+		<div class="money" style="display: none;">
 			<div class="allselect2">
 <!--				<div class="icheck2">
 					<input class="mckall2" value="0" data-checktype="0" type="checkbox">
@@ -1352,15 +1360,16 @@
 						件
 					</span>
 					<span>
-						合计（不含运费和进口税）： 
+						合计（不含运费和进口税）：
 						<i class="jiaqian" id="jiaqian">0</i>
 					</span>
 				</p>
 			</div>
-		<a href="##" class="last" id="del">去结算</a>
+		<a href="#" class="last" id="del">去结算</a>
 		</div>
-	<!---信赖，无忧-------------------------------------------------->
-<div class="nfooter">
+
+	    <!---信赖，无忧-------------------------------------------------->
+        <div class="nfooter">
 	<div class="genuine">
 		<div class="w1100">
 			<a href="#">
@@ -1394,25 +1403,25 @@
 			妈妈口碑信赖
 		</a>
 		</div>
-		
+
 	</div>
 </div>
 
-<!----使用帮助---------------------------------------->
-<div class="nhelp">
+        <!----使用帮助---------------------------------------->
+        <div class="nhelp">
 	<div class="w1000">
 		<div class="r" style="margin-right: 72px;">
 			<ul class="EWM">
 				<li class="strong">关注蜜芽</li>
 				<li>
-					<img src="img/index_fd_sj.gif" alt="手机蜜芽"/>
+					<img src="{% static 'img/index_fd_sj.gif' %}" alt="手机蜜芽">
 					<div class="right">
 						<a href="#">
-							<img src="img/index_fd_wb.gif" alt="官方微博" />
+							<img src="{% static 'img/index_fd_wb.gif' %}" alt="官方微博">
 						</a>
 						<div class="PubBtnHover">
-							<img src="img/index_fd_wx.gif" />
-							<img src="img/index_fd_wx_more.gif" class="wxmore" />
+							<img src="{% static 'img/index_fd_wx.gif' %}">
+							<img src="{% static 'img/index_fd_wx_more.gif' %}" class="wxmore">
 						</div>
 					</div>
 				</li>
@@ -1424,26 +1433,26 @@
 				<li><a href="#">新手指南</a></li>
 				<li><a href="#">蜜粉值体系</a></li>
 				<li><a href="#">蜜豆体系</a></li>
-				<li><a href="#">正品承诺</a></li>				
+				<li><a href="#">正品承诺</a></li>
 			</ul>
 			<ul>
 				<li class="strong">支付方式</li>
 				<li><a href="#">支付方式</a></li>
 				<li><a href="#">支付流程</a></li>
-				<li><a href="#">跨境进口税</a></li>				
+				<li><a href="#">跨境进口税</a></li>
 			</ul>
 			<ul>
 				<li class="strong">配送方式</li>
 				<li><a href="#">包邮政策</a></li>
 				<li><a href="#">发货时间</a></li>
 				<li><a href="#">配送区域</a></li>
-				<li><a href="#">验货签收</a></li>				
+				<li><a href="#">验货签收</a></li>
 			</ul>
 			<ul>
 				<li class="strong">售后服务</li>
 				<li><a href="#">退货政策</a></li>
 				<li><a href="#">退货流程</a></li>
-				<li><a href="#">退款方式</a></li>				
+				<li><a href="#">退款方式</a></li>
 			</ul>
 			<ul class="contact" style="width: 200px;">
 				<li class="strong">联系方式</li>
@@ -1451,14 +1460,14 @@
 				<li>商务合作 bd@mia.com</li>
 				<li>媒体合作 pr@mia.com</li>
 				<li>采购中心 cx@mia.com</li>
-				<li>企业采购 qiye@mia.com</li>				
+				<li>企业采购 qiye@mia.com</li>
 			</ul>
 		</div>
 	</div>
 </div>
 
-<!--====底部=========================================-->
-<div class="Nlink">
+        <!--====底部=========================================-->
+        <div class="Nlink">
 	<div class="w1000">
 		<p>
 			<a href="#">关于蜜芽</a>|
@@ -1468,67 +1477,67 @@
 			<a href="#">联系我们</a>|
 			<a href="#">友情链接</a>|
 			<a href="#">触屏版</a>|
-			<a href="#">媒体报道</a>|			
-			<a href="#">妈米计划</a>			
+			<a href="#">媒体报道</a>|
+			<a href="#">妈米计划</a>
 		</p>
-		
+
             京公网安备：11010502027270 | 营业执照：91110105585582599307U | 食品经营许可证：SP1101051410296669 | 京ICP证140430号 | 京ICP备14006215号
-            <br />
+            <br>
             通过本网站直接或者间接地推销商品或者服务的商业宣传活动均属“广告”
-            <br />           
+            <br>
             Copyright © 2016 北京花旺在线商贸有限公司 Mia.com 保留一切权利。 客服热线： 400-789-2000
-            <br />
+            <br>
         <p class="cert">
         	<a href="#">
-        		<img width="105" border="0" src="imag/bluelogo.gif" />
+        		<img src="{% static 'imag/bluelogo.gif' %}" width="105" border="0">
         	</a>
         	<span style="display:inline-block;position:relative;width:auto;">
         		<a style="display: inline-block;" href="#">
-        			<img width="80" src="imag/cnnic.png" />
+        			<img src="{% static 'imag/cnnic.png' %}" width="80">
         		</a>
         	</span>
-        	
+
         	<a href="#">
-        		<img border="0" src="imag/chengxin.jpg" />
+        		<img src="{% static 'imag/chengxin.jpg' %}" border="0">
         	</a>
         	<a href="#">
-        		<img width="105" src="imag/alipay.jpg" />
+        		<img src="{% static 'imag/alipay.jpg' %}" width="105">
         	</a>
         </p>
 	</div>
 </div>
-	</body>
-	
-	
-	<!----二维验证码>>>>左侧-------------------------------------------->
-<div class="ewm">
-	<img src="img/ewm.png" />
+
+
+
+
+        <div class="ewm">
+	<img src="{% static 'img/ewm.png' %}">
 </div>
 
-<!-------------------右侧------------------------------------------->
-<div id="rightlist">
+        <!-------------------右侧------------------------------------------->
+        <div id="rightlist">
 			<div id="rightReturn">
 				<ul>
 					<li class="lione">
-						<i><img src="images/smallshopcar.jpg"/></i>
+						<i><img src="{% static 'images/smallshopcar.jpg' %}"></i>
 						购物车
 					</li>
 					<li class="litwo">
-						<i><img src="images/zixun.jpg"/></i>
+						<i><img src="{% static 'images/zixun.jpg' %}"></i>
 						咨询
 					</li>
 					<li class="lithere" id="lilianxi">
-						<i><img src="images/dianhua.jpg"/></i>
+						<i><img src="{% static 'images/dianhua.jpg' %}"></i>
 						客服
 						<div class="lianxi" id="lianxi">
-							
+
 						</div>
 					</li>
 					<li class="lifour" id="ligzh">
-						<i><img src="images/weixin.jpg"/></i>
+						<i><img src="{% static 'images/weixin.jpg' %}"></i>
 						微信
 						<div class="gzh" id="gzh">
-							
+
 						</div>
 					</li>
 				</ul>
@@ -1537,5 +1546,6 @@
 				</div>
 			</div>
 		</div>
+
 	</body>
 </html>

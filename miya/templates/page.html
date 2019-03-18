@@ -27,7 +27,7 @@
                 </div>
                 <div class="headerRight">
                     <span class="addname" id="addname"></span>
-                    <span class="nihao">你好，欢迎来到蜜芽 !</span>
+                    <span class="nihao">你好{{ user.tel }}，欢迎来到蜜芽 !</span>
                     <div id="addname"></div>
                     <ul>
                         <li><a href="{% url 'miya:login' %}" class="lis">登录</a></li>
@@ -1408,7 +1408,7 @@
                 {% for good in goods %}
                     <div class="col-sm-6 col-md-4">
                         <div class="thumbnail">
-                            <a href="#"><img src="{{ good.productimg }}" alt="">
+                            <a href="{% url 'miya:xiangqing' good.id %}"><img src="{{ good.productimg }}" alt="">
                                 <div class="caption">
                                     <p>{{ good.productname }}</p>
                                     <p>{{ good.productlongname }}</p>

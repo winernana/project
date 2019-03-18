@@ -73,10 +73,32 @@ class Goods(models.Model):
     class Meta:
         db_table='miya_goods'
 
-
+# 用户模型类
 class User(models.Model):
     tel = models.CharField(max_length=20,unique=True )
     password = models.CharField(max_length=100)
 
     class Meta:
         db_table = 'miya_user'
+
+ #购物车模型类
+class Cart(models.Model):
+    # 添加的商品属于那个   用户
+    # 一个用户对应多个商品    用户对应多个商品
+    user = models.ForeignKey(User)
+
+    # 添加的是那个商品
+    #一个商品可以被多个用户添加  商品对应多个用户
+    goods = models.ForeignKey(Goods)
+
+    # 具体规格
+    # 商品数量
+    number = models.IntegerField()
+
+
+    isselect = models.BooleanField(default=True)
+    #是否删除
+    isdelete = models.BooleanField(default=False)
+
+    class Meta:
+        db_table='miya_cart'
