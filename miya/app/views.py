@@ -4,6 +4,7 @@ import time
 
 from django.core.cache import cache
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, redirect
 
 
@@ -28,7 +29,15 @@ def home(request):
 
 
 def login(request):
-    return render(request,'login.html')
+    if request.method == 'GET':
+        return render(request,'login.html')
+    elif request.method == 'POST':
+        tel = request.POST.get('tel')
+        password = request.POST.get('password')
+
+        users = User.objects.filter(tel=tel)
+        if users.exists():
+            user=users.first()
 
 
 def generate_password(param):
@@ -48,8 +57,8 @@ def register(request):
         return render(request,'register.html')
     elif request.method == 'POST':
         tel = request.POST.get('tel')
-        password = generate_password(request.POST.get('password'))
-
+        # password = generate_password(request.POST.get('password'))
+        password = request.POST.get('password')
         # 存入数据库
         user = User()
         user.tel = tel
