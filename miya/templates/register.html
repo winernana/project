@@ -37,24 +37,27 @@
 				</div>
 				
 				<!--表单-->
-				<form class="form">
+				<form class="form" action="{% url 'miya:register' %}" method="post">
+
+                    {% csrf_token %}
 					<input type="text" id="haoma" placeholder="手机号" class="text"/>
 					<p class="kong">手机号不能为空</p>
 					<p class="kongkong">手机号错误</p>
 					
-					<p class="kong3">输入的验证码错误</p>
-					<p class="kongg3">验证码不能为空</p>
-					<div class="yan">
-						<input type="text" id="yzm" placeholder="输入验证码" class="yam"/>
-						<input type="text" id="code1" value="" class="code" />
-						<a href="#" id="look">看不清</a>
-					</div>
+{#					<p class="kong3">输入的验证码错误</p>#}
+{#					<p class="kongg3">验证码不能为空</p>#}
+{#					<div class="yan">#}
+{#						<input type="text" id="yzm" placeholder="输入验证码" class="yam">#}
+{##}
+{#						<input  type="text" id="code1" value="" class="code" >#}
+{#						<a href="#" id="look">看不清</a>#}
+{#					</div>#}
 					
-					<p class="kong2">短信验证码错误</p>
-					<div class="duanxi">
-						<input type="text" id="duanx" class="xx" placeholder="短信验证码" value=""/>
-						<a href="##" class="get" id="get">获取短信验证码</a>
-					</div>
+{#					<p class="kong2">短信验证码错误</p>#}
+{#					<div class="duanxi">#}
+{#						<input type="text" id="duanx" class="xx" placeholder="短信验证码" value=""/>#}
+{#						<a href="#" class="get" id="get">获取短信验证码</a>#}
+{#					</div>#}
 					
 					<input type="password" id="password" class="pass" placeholder="密码"/>
 					<p class="kong1">长度为6-14个字符，建议使用字母加数字或符号组合</p>
@@ -75,7 +78,7 @@
 						<input checked="checked" id="agreeuser"  type="checkbox" class="gou">我已阅读并接受<span>《蜜芽服务条款》</span>
 					</p>
 					<p class="tiqiao">
-						<a href="##" class="go" id="come">注册</a>
+						<input type="submit" value="注册" class="go" id="come">
 					</p>
 				</form>
 			</div>
