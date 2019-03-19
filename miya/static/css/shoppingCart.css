@@ -17,7 +17,7 @@ body{font-size: 12px;color:#666 ;}
 .myCart .option .gs1{width: 280px;}
 
 /*购物车详情*/
-.details{width: 1068px;margin: 0 auto;overflow: hidden;min-height: 200px;_height:200p;border: 1px solid #ededed;}
+.details{width: 1068px;margin: 0 auto;overflow: hidden;min-height: 200px;_height:200px;border: 1px solid #ededed;}
 .details .boxBox .tuLeft{overflow: hidden;clear: both;float:left;width: 77px;height: 77px;border: 1px solid #ddd;margin: 14px;cursor: pointer;position: relative;}
 .details .boxBox .tuLeft img{width: 77px;height: 77px;}
 .details .boxBox .pRight{float: left;margin: 14px;cursor: pointer; width: 280px;}
@@ -33,7 +33,7 @@ body{font-size: 12px;color:#666 ;}
 .details .boxBox .dela:hover{color: #fa4b9b;}
 .details .boxBox .bigTu{width: 200px;height: 200px;background: red;display: none;z-index: 10;overflow: hidden;clear: both;}
 .details .boxBox .bigTu img{width: 200px;height: 200px;}
-.empty{width: 900px;height: 240px;background:url(../images/empty_icon.jpg) no-repeat 150px 90px;display: block;margin: -246px 0 0 257px;}
+.empty{width: 900px;height: 240px;background:url(../images/8.jpg) no-repeat 150px 90px;display: block;margin: -246px 0 0 257px;}
 .empty .baby{width: 700px;height: 54px;font-size: 30px;color: #ccc;margin: 0px 0 0px 257px;padding-top: 100px;}
 .empty .index{width: 700px;height:17px;color: #666;font-size: 12px;margin-left: 262px;}
 .empty .index a{font-size: 14px;font-weight: 700;color: #f450a2;}

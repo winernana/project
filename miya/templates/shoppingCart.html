@@ -1329,20 +1329,48 @@
 		</div>
 
 
+
 		<!--购物车详情-->
 		<div class="details">
-            {% for cart in carts %}
-                {{ cart.goods.productimg }}
-                {{ cart.goods.productlongname }}
-                {{ cart.num }}
-            {% endfor %}
-		</div>
 
-		<!--购物车为空时显示提示信息-->
-		<div class="empty" style="display: block;">
-				<p class="baby">您还没有为您可爱的宝宝挑选任何商品哦~</p>
-				<p class="index">您可以去 <a href="{% url 'miya:home' %}">首页</a> 挑选宝宝喜欢的商品</p>
+            <div class="boxBox">
+
+               {% for cart in carts %}
+                    <div class="tuLeft">
+                        <img src="{{ cart.goods.productimg }} " alt="">
+                    </div>
+
+                    <div class="pRight">
+                        {{ cart.goods.productlongname }}
+                    </div>
+                    <div class="pCenter"></div>
+                    <div class="addnumT">
+                        <div class="jianT"></div>
+                        <div class="bjT"></div>
+                        <div class="numbianT">{{ cart.number }}</div>
+                    </div>
+                    <div class="lastPic"></div>
+                    <div class="dela"></div>
+                    <div class="bigTu">
+                         <img src="{{ cart.goods.productimg }} " alt="">
+                    </div>
+                   
+
+                {% endfor %}
+
+            </div>
+
 		</div>
+{#{% for cart in carts %}#}
+{#                <img src="{{ cart.goods.productimg }}" alt="">#}
+{#                {{ cart.goods.productlongname }}#}
+{#                {{ cart.num }}#}
+{#            {% endfor %}#}
+{#		<!--购物车为空时显示提示信息-->#}
+{#		<div class="empty" style="display: block;">#}
+{#				<p class="baby">您还没有为您可爱的宝宝挑选任何商品哦~</p>#}
+{#				<p class="index">您可以去 <a href="{% url 'miya:home' %}">首页</a> 挑选宝宝喜欢的商品</p>#}
+{#		</div>#}
 
 		<!--结算-->
 		<div class="money" style="display: none;">

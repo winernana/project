@@ -114,12 +114,14 @@ def shoppingCar(request):
 
         carts = Cart.objects.filter(user=user)
 
-    response_data={
-        'user':user,
-        'carts':carts,
-    }
+        response_data={
+            'user':user,
+            'carts':carts,
+        }
 
-    return render(request,'shoppingCart.html',context=response_data)
+        return render(request,'shoppingCart.html',context=response_data)
+    else:
+        return HttpResponse('用户未登录，请返回登陆')
 
 
 def xiangqing(request,goodid=1):
@@ -164,6 +166,7 @@ def addshoppingcart(request):
                 cart.save()
                 response_data={
                     'num':number,
+                    'goodid':goodid,
                 }
                 print('12156156')
                 return JsonResponse(response_data)
@@ -174,5 +177,5 @@ def addshoppingcart(request):
                 cart.number = int(number)
                 cart.save()
 
-                # response_data='添加 {} 购物车成功: {}'.format(cart.goods.productlongname, cart.number)
-
+            response_data='添加 {} 购物车成功: {}'.format(cart.goods.productlongname, cart.number)
+            return JsonResponse(response_data)
